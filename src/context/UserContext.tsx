@@ -3,7 +3,7 @@ import i18n from 'src/i18n';
 import { Config } from 'src/types';
 
 const initialConfig: Config = {
-  lang: 'GE',
+  lang: 'EN',
   theme: 'dark',
 };
 
