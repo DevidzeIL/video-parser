@@ -27,8 +27,14 @@ export const Home = () => {
   const [errors, setErrors] = useState<{ url: string; error: string; row: number }[]>([]);
 
   const isValidUrl = (url: string) => {
-    const urlRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/;
-    return urlRegex.test(url);
+    try {
+      const formattedUrl = url.startsWith('http') ? url : `http://${url}`;
+      const parsedUrl = new URL(formattedUrl);
+      const hostname = parsedUrl.hostname.replace(/^www\./, '');
+      return hostname === 'youtube.com' || hostname === 'youtu.be';
+    } catch (e) {
+      return false;
+    }
   };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {

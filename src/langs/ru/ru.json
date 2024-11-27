@@ -1,6 +1,6 @@
 {
   "home": {
-    "chooseFile": "Выберите файл",
+    "chooseFile": "Выберите .xlsx файл",
     "processFile": "Обработать файл",
     "downloadFile": "Скачать обработанный файл",
     "clearAll": "Очистить все",

@@ -1,6 +1,6 @@
 {
   "home": {
-    "chooseFile": "Choose File",
+    "chooseFile": "Choose .xlsx File",
     "processFile": "Process File",
     "downloadFile": "Download Processed File",
     "clearAll": "Clear All",
