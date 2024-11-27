@@ -1,0 +1,12 @@
+.main-layout {
+  display: flex;
+  background-color: var(--background);
+  height: 100vh;
+  /* height: -webkit-fill-available; */
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow: auto;
+}

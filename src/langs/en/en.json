@@ -1,0 +1,16 @@
+{
+  "home": {
+    "chooseFile": "Choose File",
+    "processFile": "Process File",
+    "downloadFile": "Download Processed File",
+    "clearAll": "Clear All",
+    "errorTitle": "Errors",
+    "error": "Error",
+    "row": "Row",
+    "errorNoData": "No data could be retrieved for this URL.",
+    "errorUnknown": "Unknown error occurred.",
+    "errorFile": "File",
+    "errorHeaderDetected": "Headers or non-link content detected. Only links are allowed.",
+    "errorInvalidFormat": "Invalid format. Only YouTube links are allowed."
+  }
+}

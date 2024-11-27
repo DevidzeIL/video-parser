@@ -1,0 +1,60 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    jest: true,
+  },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2021,
+    project: ['./tsconfig.json'],
+    sourceType: 'module',
+    tsconfigRootDir: __dirname,
+  },
+  ignorePatterns: ['node_modules/*'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint', 'security'],
+  extends: [
+    'plugin:react/recommended',
+    'plugin:security/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+  ],
+
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }],
+    'security/detect-object-injection': 'off',
+    'security/detect-non-literal-regexp': 'off',
+    '@typescript-eslint/no-use-before-define': 'warn',
+    '@typescript-eslint/no-unused-vars': ['warn'],
+    '@typescript-eslint/no-var-requires': 'warn',
+    '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-extraneous-class': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/triple-slash-reference': 'off',
+    '@typescript-eslint/restrict-template-expressions': 'off',
+    '@typescript-eslint/promise-function-async': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
+    '@typescript-eslint/dot-notation': 'off',
+    '@typescript-eslint/consistent-type-definitions': 'off',
+    '@typescript-eslint/consistent-type-imports': 'off',
+    '@typescript-eslint/consistent-indexed-object-style': 'off',
+    '@typescript-eslint/restrict-plus-operands': 'off',
+    '@typescript-eslint/array-type': 'off',
+    '@typescript-eslint/method-signature-style': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+  },
+};

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": ["DOM", "ES6", "DOM.Iterable", "ScriptHost", "ES2016.Array.Include"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "allowJs": true,
+    "isolatedModules": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "."
+  },
+  "include": ["src/**/*", "config/**/*", "public/config.js", ".eslintrc.js"]
+}

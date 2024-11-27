@@ -1,0 +1,75 @@
+.btn {
+  border: none;
+  background: var(--btn-background);
+  min-height: 3rem;
+
+  display: flex;
+  align-items: center;
+
+  color: var(--white);
+  padding: 10px 23px;
+
+  text-align: left;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: auto;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.btn_default {
+  background-color: var(--btn-background);
+  color: var(--text);
+  font-size: 1.5rem;
+  border: 1px solid var(--btn-border);
+  border-radius: 0.2rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.btn_default img {
+  width: 1.5rem;
+}
+
+.btn_small {
+  background-color: var(--btn-background);
+  color: var(--text);
+  border: 1px solid var(--btn-border);
+  border-radius: 0.2rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.btn_small img {
+  width: 0.5rem;
+  filter: var(--icon-filter);
+}
+
+@media (max-width: 992px) {
+  .btn_default {
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .btn_default img {
+    width: 4rem;
+  }
+
+  .btn_small {
+    font-size: 4rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+  }
+  .btn_small img {
+    width: 2rem;
+    height: 2rem;
+  }
+}

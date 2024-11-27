@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+:root {
+  --btn-correct-background: #4ba62b;
+  --btn-wrong-background: #c82929;
+  --background: #03030d;
+  --text: #ffffff;
+  --btn-border: #272d34;
+  --btn-background: #161b22;
+  --icon-color: #ffffff;
+  --error-url: #00dfff;
+  --error-message: #ff6b6b;
+}
+
+:root[data-theme='light'] {
+  --btn-correct-background: #90ec6f;
+  --btn-wrong-background: #fc5d5d;
+  --background: #ffffff;
+  --text: #161b22;
+  --btn-border: #272d34;
+  --btn-background: #ffffff;
+  --icon-filter: invert(1);
+  --error-url: #00a1ff;
+  --error-message: #e80000;
+}
+
+:root[data-theme='dark'] {
+  --btn-correct-background: #4ba62b;
+  --btn-wrong-background: #c82929;
+  --background: #03030d;
+  --text: #ffffff;
+  --btn-border: #272d34;
+  --btn-background: #161b22;
+  --icon-filter: none;
+  --error-url: #00dfff;
+  --error-message: #ff6b6b;
+}
+
+* {
+  font-family: Montserrat, Arial;
+}
+
+.App {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
