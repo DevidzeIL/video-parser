@@ -22,7 +22,6 @@ const getYouTubeChannelData = async (channelId) => {
 
 const getYouTubeData = async (url) => {
   try {
-    // Извлечение videoId из URL
     const videoIdMatch = url.match(/(?:v=|\/)([0-9A-Za-z_-]{11})/);
     const videoId = videoIdMatch ? videoIdMatch[1] : null;
     if (!videoId) throw new Error('Неверный формат YouTube URL');
@@ -35,7 +34,7 @@ const getYouTubeData = async (url) => {
     const channelId = video.snippet.channelId;
     const channelData = await getYouTubeChannelData(channelId);
 
-    let videoType = 'Integration/Dedicated';
+    let videoType = 'Long Video';
     if (url.includes('shorts')) {
       videoType = 'Shorts';
     }
