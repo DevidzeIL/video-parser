@@ -26,6 +26,9 @@ export const Home = () => {
   const [processedData, setProcessedData] = useState<string | null>(null);
   const [errors, setErrors] = useState<{ url: string; error: string; row: number }[]>([]);
 
+  const [processedCount, setProcessedCount] = useState(0);
+  const [totalCount, setTotalCount] = useState(0);
+
   const isValidUrl = (url: string) => {
     try {
       const formattedUrl = url.startsWith('http') ? url : `http://${url}`;
@@ -50,6 +53,8 @@ export const Home = () => {
 
     setIsLoading(true);
     setErrors([]);
+    setProcessedCount(0);
+    setTotalCount(0);
 
     try {
       const data = await file.arrayBuffer();
@@ -57,28 +62,28 @@ export const Home = () => {
       const worksheet = workbook.Sheets[workbook.SheetNames[0]];
       const rawData: string[][] = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
 
+      const validData = rawData.filter((row) => row.some((cell) => cell?.toString().trim()));
+      setTotalCount(validData.length);
+
       const results = [];
       const errorList = [];
 
-      for (let i = 0; i < rawData.length; i++) {
-        const row = rawData[i];
+      for (let i = 0; i < validData.length; i++) {
+        const row = validData[i];
         const url = row[0]?.trim();
 
-        if (i === 0 && (!url || !isValidUrl(url))) {
-          setErrors([
-            {
-              url: t('home.errorFile'),
-              error: t('home.errorHeaderDetected'),
-              row: 0,
-            },
-          ]);
-          setIsLoading(false);
-          return;
+        if (!url) {
+          setProcessedCount((prev) => prev + 1);
+          errorList.push({
+            url: t('home.errorEmptyUrl'),
+            error: t('home.errorInvalidFormat'),
+            row: i + 1,
+          });
+          continue;
         }
 
-        if (!url) continue;
-
         if (!isValidUrl(url)) {
+          setProcessedCount((prev) => prev + 1);
           errorList.push({
             url,
             error: t('home.errorInvalidFormat'),
@@ -105,6 +110,8 @@ export const Home = () => {
             error: error.message || t('home.errorUnknown'),
             row: i + 1,
           });
+        } finally {
+          setProcessedCount((prev) => prev + 1);
         }
       }
 
@@ -191,6 +198,13 @@ export const Home = () => {
           )}
 
           {isLoading && <div className="loading-ring"></div>}
+          {isLoading && (
+            <div className="link-counters">
+              <p>
+                {t('home.processedLinks')}: {processedCount} / {totalCount}
+              </p>
+            </div>
+          )}
 
           {processedData && (
             <>

@@ -1,8 +1,9 @@
 {
   "home": {
     "chooseFile": "Choose .xlsx File",
-    "processFile": "Process File",
-    "downloadFile": "Download Processed File",
+    "processFile": "Start",
+    "downloadFile": "Download",
+    "processedLinks": "Processed URLs",
     "clearAll": "Clear All",
     "errorTitle": "Errors",
     "error": "Error",

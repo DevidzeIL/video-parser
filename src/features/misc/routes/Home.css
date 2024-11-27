@@ -3,6 +3,10 @@
   gap: 10px;
 }
 
+.link-counters {
+  color: var(--text);
+}
+
 .loading-ring {
   width: 1rem;
   height: 1rem;

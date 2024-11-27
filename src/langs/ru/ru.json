@@ -1,8 +1,9 @@
 {
   "home": {
     "chooseFile": "Выберите .xlsx файл",
-    "processFile": "Обработать файл",
-    "downloadFile": "Скачать обработанный файл",
+    "processFile": "Запуск",
+    "downloadFile": "Скачать",
+    "processedLinks": "Обработанные URL",
     "clearAll": "Очистить все",
     "errorTitle": "Ошибки",
     "row": "Строка",
