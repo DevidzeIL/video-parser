@@ -165,7 +165,6 @@ export const Home = () => {
     <>
       <ContentLayout title="Home">
         <div className="content-layout-header">
-          <div></div>
           <Dropdown
             id="language"
             currentValue={config.lang}

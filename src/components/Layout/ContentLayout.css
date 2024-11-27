@@ -3,11 +3,16 @@
   flex-direction: column;
   height: 100%;
   width: 50vw;
+  background-color: var(--background);
 }
 
 .content-layout-header {
+  position: absolute;
+  top: 2%;
+  right: 25%;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .content-layout-body {
@@ -51,6 +56,16 @@
   .content-layout {
     width: 100vw;
   }
+
+  .content-layout-header {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
   .content-layout-body-header {
     width: auto;
     padding: 1rem 2rem;
