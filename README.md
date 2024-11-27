@@ -8,7 +8,7 @@ Prerequisites:
 To set up the app execute the following commands.
 
 ```bash
-cd geo-quiz
+cd video-parser
 cp .env.example .env.local
 yarn install
 ```
@@ -36,10 +36,10 @@ Builds the app for production to the `build` folder.
 
 ### `docker compose build`
 
-Builds image for geo-quiz frontend in production mode
+Builds image for video-parser frontend in production mode
 
 <br/>
 
 ### `docker compose up`
 
-Runs image for geo-quiz frontend in production mode
+Runs image for video-parser frontend in production mode

@@ -32,6 +32,7 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
+    'security/detect-unsafe-regex': 'warn',
     'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }],
     'security/detect-object-injection': 'off',
     'security/detect-non-literal-regexp': 'off',
